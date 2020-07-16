@@ -17,3 +17,8 @@ This will be the icon image:
 
 ## resources
 https://flutterawesome.com/create-beautiful-forms-in-flutter/
+
+### Learning Flutter
+https://www.youtube.com/watch?v=pTJJsmejUOQ&t=279s
+
+https://www.youtube.com/watch?v=P2IGQT3BZQo&t=1s
