@@ -12,3 +12,5 @@ The information inputted by the app needs to be stored in a database and be retr
 Future goals: include bank routing (IFCA number)
 
 
+This will be the icon image:
+!(https://img.favpng.com/5/23/25/sringeri-sharada-peetham-adi-shankara-shankaracharya-jagadguru-advaita-vedanta-png-favpng-eXzGunsRBHwfrywRe2x8jT5nZ.jpg)
