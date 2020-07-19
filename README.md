@@ -16,4 +16,9 @@ This will be the icon image:
 !(https://img.favpng.com/5/23/25/sringeri-sharada-peetham-adi-shankara-shankaracharya-jagadguru-advaita-vedanta-png-favpng-eXzGunsRBHwfrywRe2x8jT5nZ.jpg)
 
 ## resources
+
+### Flutter general tutorial videos
 https://flutterawesome.com/create-beautiful-forms-in-flutter/
+
+### Styling the text field 
+https://www.youtube.com/watch?v=9DNPbFTvhXU
