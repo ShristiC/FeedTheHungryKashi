@@ -16,9 +16,15 @@ This will be the icon image:
 !(https://img.favpng.com/5/23/25/sringeri-sharada-peetham-adi-shankara-shankaracharya-jagadguru-advaita-vedanta-png-favpng-eXzGunsRBHwfrywRe2x8jT5nZ.jpg)
 
 ## resources
-https://flutterawesome.com/create-beautiful-forms-in-flutter/
 
 ### Learning Flutter
 https://www.youtube.com/watch?v=pTJJsmejUOQ&t=279s
 
 https://www.youtube.com/watch?v=P2IGQT3BZQo&t=1s
+
+### Input Forms
+https://flutterawesome.com/create-beautiful-forms-in-flutter/
+
+youtube.com/watch?v=9DNPbFTvhXU 
+
+https://flutter.dev/docs/cookbook/forms/validation 
