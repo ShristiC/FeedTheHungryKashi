@@ -12,14 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Shardha Shinkara Seva',
-      //home: HomePage(),
-      home: FinishedPage(),
-      debugShowCheckedModeBanner: false,
-      // routes: {
-      //   HomePage.routeName: (context) => HomePage(),
-      //   FinishedPage.routeName: (context) => FinishedPage(),
-      // }
-    );
+        title: 'Shardha Shinkara Seva',
+        home: HomePage(),
+        //home: FinishedPage(),
+        debugShowCheckedModeBanner: false,
+        routes: {
+          HomePage.routeName: (context) => HomePage(),
+          FinishedPage.routeName: (context) => FinishedPage(),
+        });
   }
 }
