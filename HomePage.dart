@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
+  // variables for saving information so can send it later
   GlobalKey<FormState> _key = new GlobalKey();
   bool _validate = false;
   String firstName, lastName, cardNumber, city, state, phoneNumber;
@@ -350,7 +351,7 @@ class _HomeState extends State<HomePage> {
     );
   }
 
-  ///checks if name input is empty
+  ///checks if name input is empty or invalid characters
   String validateName(String value) {
     String patttern = r'(^[a-zA-Z ]*$)';
     RegExp regExp = new RegExp(patttern);
@@ -362,7 +363,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
-  ///checks if card input is empty
+  ///checks if card input is empty or invalid inputs
   String validateCard(String value) {
     String patttern = r'(^[0-9]*$)';
     RegExp regExp = new RegExp(patttern);
@@ -390,7 +391,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
-  ///checks if phone number input is empty
+  ///checks if phone number input is empty or invalid characters
   String validateMobile(String value) {
     String patttern = r'(^[0-9]*$)';
     RegExp regExp = new RegExp(patttern);

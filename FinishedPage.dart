@@ -17,10 +17,11 @@ class _FinishedPageState extends State<FinishedPage> {
     ScreenUtil.init();
     ScreenUtil.init(width: 750, height: 1334, allowFontScaling: true);
     return Scaffold(
+        // creates the app bar
         appBar: _appBar(),
         body: Stack(
           children: <Widget>[
-            // header
+            // screen body
             Padding(
               padding: const EdgeInsets.only(
                   top: 5.0, bottom: 5, left: 20, right: 20),
@@ -36,6 +37,7 @@ class _FinishedPageState extends State<FinishedPage> {
                       ),
                     ),
                   ),
+                  // green check mark
                   Container(
                     padding: EdgeInsets.only(top: 50),
                     child: Icon(
@@ -44,6 +46,7 @@ class _FinishedPageState extends State<FinishedPage> {
                       color: Colors.green,
                     ),
                   ),
+                  // major text
                   Container(
                     padding: EdgeInsets.only(top: 10),
                     child: Text(
@@ -51,6 +54,7 @@ class _FinishedPageState extends State<FinishedPage> {
                       style: ThemeStyle.heading,
                     ),
                   ),
+                  // smaller text
                   Container(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10.0),
@@ -61,6 +65,7 @@ class _FinishedPageState extends State<FinishedPage> {
                       ),
                     ),
                   ),
+                  // more small text
                   Container(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10.0),
@@ -79,6 +84,7 @@ class _FinishedPageState extends State<FinishedPage> {
                       borderRadius: new BorderRadius.circular(30.0),
                     ),
                     onPressed: () {
+                      // navigation
                       Navigator.pushNamed(context, HomePage.routeName);
                     },
                     child: Text(
@@ -97,6 +103,7 @@ class _FinishedPageState extends State<FinishedPage> {
   }
 }
 
+// app bar same as input form page
 Widget _appBar() {
   return AppBar(
     title: Row(
