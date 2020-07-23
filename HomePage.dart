@@ -334,6 +334,9 @@ class _HomeState extends State<HomePage> {
           new SizedBox(height: 15.0),
           // button!
           new RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(30.0),
+            ),
             onPressed: _sendToServer,
             child: Text(
               "SUBMIT",
@@ -347,6 +350,7 @@ class _HomeState extends State<HomePage> {
     );
   }
 
+  ///checks if name input is empty
   String validateName(String value) {
     String patttern = r'(^[a-zA-Z ]*$)';
     RegExp regExp = new RegExp(patttern);
@@ -358,6 +362,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
+  ///checks if card input is empty
   String validateCard(String value) {
     String patttern = r'(^[0-9]*$)';
     RegExp regExp = new RegExp(patttern);
@@ -369,6 +374,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
+  ///checks if city input is empty
   String validateCity(String value) {
     if (value.length == 0) {
       return "City is required";
@@ -376,6 +382,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
+  ///checks if state input is empty
   String validateState(String value) {
     if (value.length == 0) {
       return "State is required";
@@ -383,6 +390,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
+  ///checks if phone number input is empty
   String validateMobile(String value) {
     String patttern = r'(^[0-9]*$)';
     RegExp regExp = new RegExp(patttern);
@@ -394,6 +402,7 @@ class _HomeState extends State<HomePage> {
     return null;
   }
 
+  ///saves data, handles navigation
   _sendToServer() {
     if (_key.currentState.validate()) {
       // No any error in validation

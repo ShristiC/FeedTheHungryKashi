@@ -41,7 +41,7 @@ class _FinishedPageState extends State<FinishedPage> {
                     child: Icon(
                       Icons.check_circle,
                       size: 80,
-                      color: ThemeStyle.blackColor,
+                      color: Colors.green,
                     ),
                   ),
                   Container(
@@ -75,6 +75,9 @@ class _FinishedPageState extends State<FinishedPage> {
                   new SizedBox(height: 120.0),
                   // button!
                   new RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0),
+                    ),
                     onPressed: () {
                       Navigator.pushNamed(context, HomePage.routeName);
                     },
