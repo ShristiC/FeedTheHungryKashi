@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './pages/HomePage.dart';
+import './pages/Login.dart';
+import './pages/Settings.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shardha Shinkara Seva',
-      home: HomePage(),
+      home: Login(),
+      routes: <String, WidgetBuilder> {
+        '/landingpage':(BuildContext context) => MyApp(),
+        '/login': (BuildContext context) => Login(),
+        '/homepage': (BuildContext context) => HomePage(),
+        '/settings': (BuildContext context) => Settings(),
+      },
       debugShowCheckedModeBanner: false,
       
     );
