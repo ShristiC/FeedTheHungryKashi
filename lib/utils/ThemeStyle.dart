@@ -57,6 +57,13 @@ class ThemeStyle {
     letterSpacing: .2,
   );
 
+  ///buttonLabelText --> Roboto font, white color, size 16, .2 letter spacing
+  static final buttonLabelText = baseTextStyle.copyWith(
+    color: whiteColor,
+    fontSize: 16,
+    letterSpacing: .2,
+  );
+
   
 
 }

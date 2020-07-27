@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/login': (BuildContext context) => Login(),
         '/homepage': (BuildContext context) => HomePage(),
         '/settings': (BuildContext context) => Settings(),
+        '/finishedpage': (BuildContext context) => Settings(),
       },
       debugShowCheckedModeBanner: false,
       
