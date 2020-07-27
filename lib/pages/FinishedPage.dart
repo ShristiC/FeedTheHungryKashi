@@ -5,7 +5,6 @@ import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FinishedPage extends StatefulWidget {
-  static const String routeName = "/finished";
   @override
   _FinishedPageState createState() => _FinishedPageState();
 }

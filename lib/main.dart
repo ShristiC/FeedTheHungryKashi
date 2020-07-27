@@ -1,3 +1,4 @@
+import 'package:Shardha_Shinkara_Seva/pages/FinishedPage.dart';
 import 'package:flutter/material.dart';
 import './pages/HomePage.dart';
 import './pages/Login.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         '/login': (BuildContext context) => Login(),
         '/homepage': (BuildContext context) => HomePage(),
         '/settings': (BuildContext context) => Settings(),
-        '/finishedpage': (BuildContext context) => Settings(),
+        '/finishedpage': (BuildContext context) => FinishedPage(),
       },
       debugShowCheckedModeBanner: false,
       
