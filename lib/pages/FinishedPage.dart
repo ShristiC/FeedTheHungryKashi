@@ -16,7 +16,7 @@ class _FinishedPageState extends State<FinishedPage> {
     ScreenUtil.init(width: 750, height: 1334, allowFontScaling: true);
     return Scaffold(
         // creates the app bar
-        appBar: _appBar(),
+        appBar: _appBar(context),
         body: Stack(
           children: <Widget>[
             // screen body
@@ -106,7 +106,7 @@ class _FinishedPageState extends State<FinishedPage> {
 }
 
 // app bar same as input form page
-Widget _appBar() {
+Widget _appBar(BuildContext context) {
   return AppBar(
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -131,7 +131,7 @@ Widget _appBar() {
           icon: Icon(Icons.account_circle),
           color: ThemeStyle.whiteColor,
           iconSize: 40,
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, '/settings'),
         ),
       ],
     ),

@@ -41,9 +41,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.account_circle),
             color: ThemeStyle.whiteColor,
             iconSize: 40,
-            onPressed: () {
-              Navigator.of(context).pushNamed('/settings');
-            },
+            onPressed: () => Navigator.pushNamed(context, '/settings'),
           ),
         ],
       ),

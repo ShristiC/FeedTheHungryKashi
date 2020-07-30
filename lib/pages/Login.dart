@@ -50,7 +50,7 @@ class _LoginState extends State<Login> {
             GoogleSignInButton(
               onPressed: () {
                 authService.googleSignIn();
-                Navigator.of(context).pushReplacementNamed('/homepage');
+                Navigator.pushReplacementNamed(context, '/homepage');
               },
               darkMode: true,
             ),               

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../services/auth.dart';
 import '../utils/ThemeStyle.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 ///Mock Seettings Page to show the current user and have the option to sign out
 class Settings extends StatefulWidget {
@@ -35,7 +36,7 @@ class _SettingsState extends State<Settings> {
           'Mock Settings',
           style: ThemeStyle.appBarStyle,
         ),
-        backgroundColor: ThemeStyle.primColor,
+        backgroundColor: ThemeStyle.secondaryMainColor,
         centerTitle: true,
       ),
       body: Column(
@@ -55,15 +56,29 @@ class _SettingsState extends State<Settings> {
               style: ThemeStyle.baseTextStyle,
             ),
           ),
-          //Sign out button
-          Center(
-            child: RaisedButton(
-              onPressed: () {
-                authService.signOut();
-                Navigator.of(context).pushReplacementNamed('/landingpage');
-              },
-              child: Text("SIGN OUT"),
+          //Button!
+          new InkWell(
+            child: Container(
+              width: ScreenUtil().setWidth(200),
+              height: ScreenUtil().setHeight(100),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  ThemeStyle.primColor,
+                  ThemeStyle.secondaryMainColor,
+                ]),
+                borderRadius: new BorderRadius.circular(30.0),
+                boxShadow: [new BoxShadow(
+                  color: ThemeStyle.greyColor.withOpacity(.3),
+                  offset: new Offset(0, -5),
+                  blurRadius: 10
+                )]
+              ),
+              child: Center(child: Text("SIGN OUT", style: ThemeStyle.buttonLabelText),),
             ),
+            onTap: () {
+              authService.signOut();
+              Navigator.pushReplacementNamed(context, '/landingpage');
+            },
           ),
         ],
       ),
