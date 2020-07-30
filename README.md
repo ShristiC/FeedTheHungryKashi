@@ -28,3 +28,6 @@ https://flutterawesome.com/create-beautiful-forms-in-flutter/
 youtube.com/watch?v=9DNPbFTvhXU 
 
 https://flutter.dev/docs/cookbook/forms/validation 
+
+### User Authentication
+https://www.youtube.com/channel/UCjBxAm226XZvgrkO-JyjJgQ

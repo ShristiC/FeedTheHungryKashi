@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "88485903352",
+    "firebase_url": "https://shardha-shinkara-seva-ap-ae4b2.firebaseio.com",
+    "project_id": "shardha-shinkara-seva-ap-ae4b2",
+    "storage_bucket": "shardha-shinkara-seva-ap-ae4b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88485903352:android:321019a5a1c8aa3afef40d",
+        "android_client_info": {
+          "package_name": "com.example.Shardha_Shinkara_Seva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88485903352-l56r732gdp79pcujqcle3h6mne630715.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.Shardha_Shinkara_Seva",
+            "certificate_hash": "adfa4d3c6173896acc85813e4b436d7b8759d67e"
+          }
+        },
+        {
+          "client_id": "88485903352-k42jvj8nt9ru0df8tsd13ubag4fancdf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWfKy8oAo-o6DMh2jyr9xHNM-RS03Ueqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88485903352-k42jvj8nt9ru0df8tsd13ubag4fancdf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "88485903352-dmq70lgt9235kismkvl9hc5lt0vggjru.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ShardhaShinkaraSeva"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
