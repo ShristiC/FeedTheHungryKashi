@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(bottom: 16),
             child: new TextFormField(
               decoration: new InputDecoration(
-                hintText: 'Adhar Pan Card Number',
+                hintText: 'Aadhar Card or PAN Number',
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: ThemeStyle.greyColor,
@@ -309,19 +309,27 @@ class _HomePageState extends State<HomePage> {
                 }),
           ),
           new SizedBox(height: 15.0),
-          // button!
-          new RaisedButton(
-            shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(30.0),
+          //Button!
+          new InkWell(
+            child: Container(
+              width: ScreenUtil().setWidth(200),
+              height: ScreenUtil().setHeight(100),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  ThemeStyle.primColor,
+                  ThemeStyle.secondaryMainColor,
+                ]),
+                borderRadius: new BorderRadius.circular(30.0),
+                boxShadow: [new BoxShadow(
+                  color: ThemeStyle.greyColor.withOpacity(.3),
+                  offset: new Offset(0, -5),
+                  blurRadius: 10
+                )]
+              ),
+              child: Center(child: Text("SUBMIT", style: ThemeStyle.buttonLabelText),),
             ),
-            onPressed: _sendToServer,
-            child: Text(
-              "SUBMIT",
-              style: ThemeStyle.buttonLabelText,
-            ),
-            color: ThemeStyle.primColor,
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-          )
+            onTap: () => _sendToServer(),
+          ),
         ],
       ),
     );
@@ -341,7 +349,7 @@ class _HomePageState extends State<HomePage> {
 
   ///checks if card input is empty or invalid inputs
   String validateCard(String value) {
-    String patttern = r'(^[0-9]*$)';
+    String patttern = r'(^[a-zA-Z0-9]\S)';
     RegExp regExp = new RegExp(patttern);
     if (value.length == 0) {
       return "Card number is required";
@@ -353,16 +361,24 @@ class _HomePageState extends State<HomePage> {
 
   ///checks if city input is empty
   String validateCity(String value) {
+    String patttern = r'(^[a-zA-Z0-9 ]+$)';
+    RegExp regExp = new RegExp(patttern);
     if (value.length == 0) {
       return "City is required";
+    } else if (!regExp.hasMatch(value)) {
+      return "Name of City does not have a valid format";
     }
     return null;
   }
 
   ///checks if state input is empty
   String validateState(String value) {
+    String patttern = r'(^[a-zA-Z ]+$)';
+    RegExp regExp = new RegExp(patttern);
     if (value.length == 0) {
       return "State is required";
+    } else if (!regExp.hasMatch(value)) {
+      return "Name of State does not have a valid format";
     }
     return null;
   }
@@ -373,7 +389,10 @@ class _HomePageState extends State<HomePage> {
     RegExp regExp = new RegExp(patttern);
     if (value.length == 0) {
       return "Phone number is required";
-    } else if (!regExp.hasMatch(value)) {
+    } else if(value.length != 10) {
+      return "Invalid Phone Number";
+    }
+    else if (!regExp.hasMatch(value)) {
       return "Phone number must be digits";
     }
     return null;
@@ -384,7 +403,7 @@ class _HomePageState extends State<HomePage> {
     if (_key.currentState.validate()) {
       // No any error in validation
       _key.currentState.save();
-      Navigator.pushNamed(context, '/finishedpage');
+      Navigator.pushReplacementNamed(context, '/finishedpage');
     } else {
       // validation error
       setState(() {

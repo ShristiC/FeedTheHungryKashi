@@ -77,22 +77,26 @@ class _FinishedPageState extends State<FinishedPage> {
                   // height: 15 for right beneath text
                   new SizedBox(height: 120.0),
                   // button!
-                  new RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0),
+                  new InkWell(
+                    child: Container(
+                      width: ScreenUtil().setWidth(250),
+                      height: ScreenUtil().setHeight(100),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(colors: [
+                          ThemeStyle.primColor,
+                          ThemeStyle.secondaryMainColor,
+                        ]),
+                        borderRadius: new BorderRadius.circular(30.0),
+                        boxShadow: [new BoxShadow(
+                          color: ThemeStyle.greyColor.withOpacity(.3),
+                          offset: new Offset(0, -5),
+                          blurRadius: 10
+                        )]
+                      ),
+                      child: Center(child: Text("INPUT FORM", style: ThemeStyle.buttonLabelText),),
                     ),
-                    onPressed: () {
-                      // navigation
-                      Navigator.pushNamed(context, '/homepage');
-                    },
-                    child: Text(
-                      "INPUT FORM",
-                      style: ThemeStyle.buttonLabelText,
-                    ),
-                    color: ThemeStyle.primColor,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 15),
-                  )
+                    onTap: () => Navigator.pushReplacementNamed(context, '/homepage'),
+                  ),
                 ],
               ),
             ),
