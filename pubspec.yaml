@@ -29,6 +29,8 @@ dependencies:
   firebase_analytics: ^5.0.16
   google_sign_in: ^4.5.1
   flutter_auth_buttons: ^0.8.0
+  firebase_database: ^3.1.6
+  cloud_firestore: ^0.13.7
 
 
 
