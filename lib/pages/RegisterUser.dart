@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 class RegisterUser extends StatefulWidget {
-  RegisterUser({Key key}) : super(key: key);
+  final _context;
+  RegisterUser({Key key, BuildContext context}) : _context = context, super(key: key);
 
   @override
   _RegisterUserState createState() => _RegisterUserState();
@@ -334,7 +335,7 @@ class _RegisterUserState extends State<RegisterUser> {
                   });
                   // No any error in validation
                   _key.currentState.save();
-                  Navigator.pushReplacementNamed(context, '/finishedpage');
+                  Navigator.pushReplacementNamed(widget._context, '/finishedpage');
                 } else {
                   // validation error
                   setState(() {
